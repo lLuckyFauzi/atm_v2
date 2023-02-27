@@ -64,20 +64,22 @@ if (listPacket) {
     `;
 }
 
+// Cara susah nominal
 if (formNominal) {
   formNominal.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (nominalValue.value.length > 0) {
-      if (user.saldo < nominalValue.value) {
+    const value = nominalValue.value;
+    if (value.length > 0) {
+      if (user.saldo < value) {
         alert("Maaf saldo anda tidak cukup");
-      } else if (nominalValue.value % 50000 == 0) {
+      } else if (value % 50000 == 0) {
         const nominalConf = confirm(
-          `Anda akan mengambil nominal sebesar ${nominalValue.value}`
+          `Anda akan mengambil nominal sebesar ${value}`
         );
         if (nominalConf) {
           newUser = {
             ...user,
-            saldo: user.saldo - nominalValue.value,
+            saldo: user.saldo - value,
           };
           user = newUser;
           alert(`Sisa uang anda ${user.saldo}`);
@@ -91,6 +93,37 @@ if (formNominal) {
   });
 }
 
+// cara mudah nominal dan terus berkurang
+// let saldo = 5000000;
+// let newSaldo;
+
+// if (formNominal) {
+//   formNominal.addEventListener("submit", (e) => {
+//     e.preventDefault();
+
+//     const value = nominalValue.value;
+//     if (value.length > 0) {
+//       if (saldo < value) {
+//         alert("Maaf saldo anda tidak cukup");
+//       } else if (value % 50000 == 0) {
+//         const nominalConf = confirm(
+//           `Anda akan mengambil nominal sebesar ${value}`
+//         );
+//         if (nominalConf) {
+//           newSaldo = saldo - value;
+//           saldo = newSaldo;
+//           alert(`Sisa uang anda ${saldo}`);
+//         }
+//       } else {
+//         alert("Nominal harus pecahan!");
+//       }
+//     } else {
+//       alert("Tidak boleh kosong");
+//     }
+//   });
+// }
+
+// Cara susah pengambilan
 const takeMoney = (value) => {
   if (user.saldo < parseInt(value)) {
     alert("Maaf Saldo Tidak Cukup!");
