@@ -36,10 +36,10 @@ if (formPin) {
 if (listPacket) {
   listPacket.innerHTML = `
     <div class="text-start">
-        <p onclick="takeMoney(${packet.seratus})"><- 100.000</p>
-        <p onclick="takeMoney(${packet.duaratus})"><- 200.000</p>
-        <p onclick="takeMoney(${packet.tigaratus})"><- 300.000</p>
-        <a href="./nominal.html">
+        <p onclick="takeMoney(${packet.seratus})" class="cursor-pointer"><- 100.000</p>
+        <p onclick="takeMoney(${packet.duaratus})" class="cursor-pointer"><- 200.000</p>
+        <p onclick="takeMoney(${packet.tigaratus})" class="cursor-pointer"><- 300.000</p>
+        <a href="./nominal.html" class="cursor-pointer">
             <div class="flex gap-[20px]">
             <p><-</p>
             <p>
@@ -50,10 +50,10 @@ if (listPacket) {
         </a>
       </div>
       <div class="text-end">
-        <p onclick="takeMoney(${packet.limaratus})">500.000 -></p>
-        <p onclick="takeMoney(${packet.satujuta})">1.000.000 -></p>
-        <p onclick="takeMoney(${packet.satusetengah})">1.500.000 -></p>
-        <div class="flex gap-[20px]">
+        <p onclick="takeMoney(${packet.limaratus})" class="cursor-pointer">500.000 -></p>
+        <p onclick="takeMoney(${packet.satujuta})" class="cursor-pointer">1.000.000 -></p>
+        <p onclick="takeMoney(${packet.satusetengah})" class="cursor-pointer">1.500.000 -></p>
+        <div class="flex gap-[20px]" class="cursor-pointer">
           <p>
             Transaksi <br />
             Lain

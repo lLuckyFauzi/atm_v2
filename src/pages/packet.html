@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>ATM - Masukan Kartu</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-[#324154] px-28 py-10 h-[100vh] flex items-center">
-    <div class="container bg-[#597298] rounded-lg flex">
-      <div
-        class="heading w-8/12 flex flex-col items-center justify-center text-white text-center text-[32pt] font-mono px-10"
-      >
-        <p>Silahkan Pilih Nominal</p>
-        <div
-          class="flex pt-[20px] gap-[50px] w-[70%] justify-between text-[35px] cursor-pointer"
-          id="listPacket"
-        ></div>
-      </div>
-      <img class="rounded-lg" src="/src/images/ambil-uang.jpg" />
-    </div>
 
-    <script src="../script.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>ATM - Masukan Kartu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#324154] px-28 py-10 h-[100vh] flex items-center">
+  <div class="bg-[#597298] w-full rounded-lg flex justify-around items-center">
+    <div class="text-white text-center text-[25px] font-mono px-10">
+      <p>Silahkan Pilih Nominal</p>
+      <div class="flex pt-[20px] gap-[50px] w-full justify-between text-[20px]" id="listPacket"></div>
+    </div>
+    <img class="rounded-lg w-[400px]" src="/src/images/ambil-uang.jpg" />
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
 </html>
